@@ -83,7 +83,9 @@ background-image: linear-gradient(to bottom, #e5e9dc, #FFF);
 ##CSS Sprites
 - Used for ''icon" art
 - Reduces number of HTTP requests (makes the site load quicker)
-Used
+
+
+
 ![Image of sprites](https://github.com/Xx-william/Study-Notes/blob/master/CSS/images/sprites.png)
 
 **Html code**
