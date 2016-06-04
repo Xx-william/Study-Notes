@@ -158,7 +158,7 @@ background-image: linear-gradient(to bottom, #e5e9dc, #FFF);
 
 Insded of writing CSS file to crea a grids system, here i prefer to use [Bootstrap grids system](http://getbootstrap.com/css/#grid).
 
-![Image of grid](https://github.com/Xx-william/Study-Notes/blob/master/CSS/images/bootstrap-grid.tiff)
+![Image of grid](https://github.com/Xx-william/Study-Notes/blob/master/CSS/images/bootstrap-grid.png)
 
 - - - - -
 ## CSS3 Special Effects
