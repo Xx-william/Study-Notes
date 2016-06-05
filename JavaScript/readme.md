@@ -7,6 +7,7 @@
        In the inspector( in the navigator ) under the console window, we can type 'this'         to see all the global object. 
 
 - **console.log()**
+
 ## Types and Operators
 ###Type
 - **undefined** - key word
