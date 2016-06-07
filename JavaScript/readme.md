@@ -1,10 +1,10 @@
-uiude#JavaScript Learning Notes
+#JavaScript Learning Notes
 - - - - -
 ##Execution Contexts and Lexical Environments
 
 
 - **this**
-       In the inspector( in the navigator ) under the console window, we can type 'this'         to see all the global object. 
+   In the inspector( in the navigator ) under the console window, we can type 'this'         to see all the global object. 
 
 - **console.log()**
 
@@ -362,4 +362,164 @@ console.log(arr4); // [false, true, true]
 ##Opensources to learn
 - **underscore.js**
 - **lodash.js**
+- **moment.js**
+---
+
+##Object-Oriented JavaScript
+###Inheritance
+The prototype of the Object.
+```JavaScript
+__proto__
+```
+
+Use the method ' **_.extend()** ' in the library **underscore.js** to inherit.
+---
+
+##Building Objects
+### prototype
+'prototype' is the build-in property for different object  
+
+### Diffrent way to build/construct objects
+Functions are objects in JavaScript  
+Key word ' **New** '
+```JavaScript
+function Person(firstname, lastName) {
+	this.firstname = firstname;
+	this.lastName = lastName;
+}
+
+Person.prototype.getFullName = function() {
+	return this.firstname + ' ' + this.lastName;
+}; // it's better to put the function into the 'prototype'(instead of write it in the 'Person') , so when the new instances of the 'Person' are created, the function 'getFullName' won't be recreated in the memory many times, it will have just one copy in the memory. For performentce purpose.
+
+var william = new Person('William', 'Wang');
+console.log(william); // Person {firstname: "William", lastName: "Wang"}
+```
+
+### The dangers to use build-in function constructors
+```JavaScript
+var a = 3;  // a is the primative 
+var b = new Number(3); // b is an object
+var c = Number('3');
+
+console.log(a == b); // true
+console.log(a === b); // false
+
+console.log(a == c); //true
+console.log(a ===c); //true
+```
+
+### Array and for-in
+In order to loop an array, do not use ' for-in ' loop, use standered ' for ' loop
+
+### Object.creat()  ( pure prototypal inheritance )
+```JavaScript
+var person = {
+	firstname: 'Default',
+	lastname: 'Default',
+	greet: function() {
+		return 'Hi ' + this.firstname;
+	}
+};
+
+var william = Object.create(person); // it will creat a empty object with the prototype pointing to the ' person '
+william.firstname = 'William';
+william.lastname = 'Wang';
+console.log(william.greet()); // Hi William
+```
+**Polyfill**
+```JavaScript
+if (!Object.create) {
+	Object.create = function (o) {
+		if(arguments.length > 1) {
+			throw new Error('Object.create implementation only accepts the first parameter');
+		}
+		function F(){}
+		F.prototype = o;
+		return new F();
+	};
+}
+```
+
+### ES6 And Classes
+```JavaScript
+class Person {
+	constructor(firstname, lastname) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+
+	greet() {
+		return 'Hi ' + this.firstname;
+	}
+}
+
+var william = new Person('William', 'Wang');
+console.log(william.greet());// Hi William
+```
+
+**Key word ' extends ' **
+```JavaScript
+class InfomalPerson extends Person {
+	constructor(firstname, lastname){
+		super(firstname, lastname);
+	}
+	greet() { // overide the parent method
+		return 'Hello ' + this.firstname;
+	}
+}
+
+var wang = new InfomalPerson('WANG','Xi');
+console.log(wang.greet());// Hello WANG
+```
+---
+
+## Odds and Ends
+
+### typeof , instanceof
+```JavaScript
+var a = 3;
+console.log(typeof a); // number
+
+var b = 'Hello';
+console.log(typeof b); // string
+
+var c = {};
+console.log(typeof c); // object
+
+var d = [];
+console.log(typeof d); // object ,  is weird
+console.log(Object.prototype.toString.call(d)); // [Object Array] , it's better
+
+function Person(name) {
+	this.name = name;
+}
+
+var e = new Person('William');
+console.log(typeof e); // object , function is object in JavaScript
+console.log(e instanceof Person); // true
+
+console.log(typeof undefined);// undefined
+console.log(typeof null); // object, a bug in JavaScript
+```
+
+### Strict Mode [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
+
+```JavaScript
+var person;
+persom = {}; //mistapping on purpose
+console.log(typeof persom);// object
+```
+We don't want this happen, because sometimes it makes code very difficult to debug, we want the complier to make sure that every time we use a variable, it has to be declared.  
+We can use 'Strict Mode' to tell the complier to do this.
+```JavaScript
+"use strict"; // add this to the code
+
+var person;
+persom = {};  // Error 
+console.log(typeof persom);
+```
+
+
 
