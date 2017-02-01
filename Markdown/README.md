@@ -15,6 +15,8 @@ _This text will be italic too_
 **This text will be bold**  
 __This text will be bold too__
 
+~~Scrathch this~~
+
 _You can **combine** them_
 
 ```
@@ -23,6 +25,8 @@ _This text will be italic too_
 
 **This text will be bold**
 __This text will be bold too**
+
+~~Scrathch this~~
 
 _You can **combine** them_
 ```
@@ -53,3 +57,31 @@ _You can **combine** them_
 
 ## Images
 ![GitHub Logo](images/logo-github.png)
+```
+![GitHub Logo](images/logo-github.png)
+```
+
+## Links
+[GitHub](https://github.com/Xx-william)  
+```
+[GitHub](https://github.com/Xx-william)  
+```
+
+## Blockquotes
+As Steve Jobs said:
+> Sometimes life hits you in the head with a brick.   
+> Don't lose faith. 
+```
+As Steve Jobs said:
+> Sometimes life hits you in the head with a brick.   
+> Don't lose faith. 
+```
+
+## Inline code
+I think you should use an `<addr>` element here instead
+
+```
+I think you should use an `<addr>` element here instead
+```
+
+## Code
