@@ -71,6 +71,7 @@ _You can **combine** them_
 As Steve Jobs said:
 > Sometimes life hits you in the head with a brick.   
 > Don't lose faith. 
+
 ```
 As Steve Jobs said:
 > Sometimes life hits you in the head with a brick.   
