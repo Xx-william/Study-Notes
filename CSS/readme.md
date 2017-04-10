@@ -1,5 +1,5 @@
-#Form
-##Input Types
+# Form
+## Input Types
 - text
 - email
 - tel ( friendly to the phone browser )
@@ -10,13 +10,13 @@
 - radio
 - checkbox
 
-#CSS
-##box
+# CSS
+## box
 - padding
 - marging
 - border
 - box-sizing: border-box;  It makes sure that the padding or marging of the element won't change it's original size 
-##Float
+## Float
 - .clearFix 
 ```CSS
 .clearFix: before,
@@ -31,23 +31,23 @@
     zoom: 1;
 }
 ```
-##Position
+## Position
 **absolute** : it will find his closest ancestor who ueses the relative position as his reference frame, if this ancestor does not exist, it will chosse navigator window as his reference frame.
 
 **relative** : the refrence of the a relative position element is himself.
 
 - z-index
 
-##Color
+## Color
 - rgba(_,_,_,_); red, green, blue, alpha(transparent)
 
-##Selector
+## Selector
 - table tr : nth-child(2) {   }
 - input[type=''email''] {   }
 - :hover
 - :focus
 
-##Typography
+## Typography
 - font-size
 - font-weight
 - font-style: italic
@@ -60,7 +60,7 @@
 - text-indent: 20px;
 - line-height: 1.5;
 
-##Custom fonts
+## Custom fonts
 ```css
 @font-face {
         font-family: 'nameOfFont';
@@ -75,7 +75,7 @@
 ```
 Don't forget to add the bold / italic version of the font too.
 
-##Background Images
+## Background Images
 ```CSS
 background-imag: url('yourURL');
 background-repeat: repeat-x;     'no-repeat'
@@ -93,7 +93,7 @@ background-color: #e5e9dc; /* if the navigator doesn't support gradient, it will
 background-image: linear-gradient(to bottom, #e5e9dc, #FFF);
 ```
 
-##CSS Sprites
+## CSS Sprites
 - Used for ''icon" art
 - Reduces number of HTTP requests (makes the site load quicker)
 
@@ -132,7 +132,7 @@ background-image: linear-gradient(to bottom, #e5e9dc, #FFF);
 .ui-settings a:hover {background-position: -50px -100px;}
 ```
 - - - - -
-##Responsive Web Design
+## Responsive Web Design
 1. Meta tag in <head> section of HTML
     ```HTML
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -162,7 +162,7 @@ Insded of writing CSS file to crea a grids system, here i prefer to use [Bootstr
 
 - - - - -
 ## CSS3 Special Effects
-###Box Shadow
+### Box Shadow
 ```CSS
     .box-a {
         box-shadow: 10px 5px 5px #000; /* we can use rgba color to creat transparent shadow */
@@ -311,7 +311,7 @@ animation-fill-mode: forwards; /* after finish animation, make the element stays
 - - - - -
 
 
-##Sass ( CSS Extension Language)
+## Sass ( CSS Extension Language)
 -  **Variables**
 ```Scss
 $favoriteColor: #FFF;
@@ -386,7 +386,7 @@ There is a community mixins that sharing the mixin.
 - Susy
 
 - - - - -
-##Cross Browsers
+## Cross Browsers
 ### Feature Detection
 [caniuse.com](http://www.caniuse.com)
 **Modernizr** ( JavaScript library) : it will comunicate withe the browser and get all the type this browser supports, after that, it will add this type ( all types supported by this browser) into the < html class="" > label.
