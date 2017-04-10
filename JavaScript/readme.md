@@ -1,6 +1,6 @@
-#JavaScript Learning Notes
+# JavaScript Learning Notes
 - - - - -
-##Execution Contexts and Lexical Environments
+## Execution Contexts and Lexical Environments
 
 
 - **this**
@@ -10,7 +10,7 @@
 
 - - - - -
 ## Types and Operators
-###Type
+### Type
 - **undefined** - key word
     the variable is created in the memery but has no value.
 
@@ -20,11 +20,11 @@
 - **String** is primitive type in JavaScript
 - **symbol** used in ES6
 
-###Operator ' == ' and ' === '
+### Operator ' == ' and ' === '
 - **' a == b  '**  - Equality - If  a and b have the same value
 - **' a === b '** - Strict Equality - If a and b have the same value and if a and b have the same type
 
-###Existence and Boolean
+### Existence and Boolean
 ```JavaScript
     Boolean(undefined); // false
     Boolean(null); // false
@@ -37,7 +37,7 @@ if ( a ){ // if a has value
 }
 ```
 - - - - -
-##Objects and Functions
+## Objects and Functions
 ### JSON ( JavaScript Object Notation )
 ```JavaScript
 var jsonString = JSON.stringify( yourObject ); // build-in method to convert Object to JSON
@@ -132,7 +132,7 @@ var c = {
 	}
 };
 ```
-###Array
+### Array
 ```JavaScript
 var arr = [
 	1,
@@ -233,7 +233,7 @@ fs2[0]();
 fs2[1]();
 fs2[2]();
 ```
-###Callback
+### Callback
 Callback function is a function you give to another function, to be run when the other function is finished.
 ```JavaScript
 function sayHiLater() {
@@ -375,7 +375,7 @@ __proto__
 Use the method ' **_.extend()** ' in the library **underscore.js** to inherit.
 ---
 
-##Building Objects
+## Building Objects
 ### prototype
 'prototype' is the build-in property for different object  
 
